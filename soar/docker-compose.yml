@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+
+  cassandra:
+    image: cassandra:3.11
+    container_name: cassandra
+    ports:
+      - "9042:9042"
+
+  thehive:
+    image: strangebee/thehive:4.1
+    container_name: thehive
+    ports:
+      - "9000:9000"
+    depends_on:
+      - cassandra
