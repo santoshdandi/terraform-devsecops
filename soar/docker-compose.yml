@@ -1,5 +1,5 @@
-version: '3'
 services:
+
   cassandra:
     image: cassandra:3.11
     container_name: cassandra
@@ -8,18 +8,13 @@ services:
       - HEAP_NEWSIZE=128M
     ports:
       - "9042:9042"
-    volumes:
-      - cassandra_data:/var/lib/cassandra
 
   thehive:
-    image: strangebee/thehive:4.0.4
+    image: strangebee/thehive:4.1
     container_name: thehive
     depends_on:
       - cassandra
     environment:
-      - JVM_OPTS=-Xms100m -Xmx512m
+      - JVM_OPTS=-Xms512m -Xmx512m
     ports:
       - "9000:9000"
-
-volumes:
-  cassandra_data:
