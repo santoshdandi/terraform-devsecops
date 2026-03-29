@@ -10,7 +10,7 @@ services:
       - "9042:9042"
 
   thehive:
-    image: strangebee/thehive:4.1
+    image: strangebee/thehive:4
     container_name: thehive
     depends_on:
       - cassandra
