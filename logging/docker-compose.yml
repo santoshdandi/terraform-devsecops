@@ -1,17 +1,6 @@
 version: '3'
 
 services:
-
-  logstash:
-    image: docker.elastic.co/logstash/logstash:7.17.9
-    container_name: logstash
-    environment:
-      - LS_JAVA_OPTS=-Xms128m -Xmx256m
-    ports:
-      - "5044:5044"
-    volumes:
-      - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
-
   filebeat:
     image: docker.elastic.co/beats/filebeat:7.17.9
     container_name: filebeat
