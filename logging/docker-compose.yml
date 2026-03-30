@@ -7,8 +7,6 @@ services:
     volumes:
       - ./filebeat.yml:/usr/share/filebeat/filebeat.yml
       - /var/log:/var/log
-    depends_on:
-      - logstash
 
   python-app:
     image: python:3.9
