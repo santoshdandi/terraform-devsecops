@@ -3,7 +3,7 @@ services:
     image: docker.elastic.co/kibana/kibana:7.17.9
     container_name: kibana
     environment:
-      - ELASTICSEARCH_HOSTS=http://<ELASTIC_PRIVATE_IP>:9200
+      - ELASTICSEARCH_HOSTS=http://10.0.1.218:9200
       - NODE_OPTIONS=--max-old-space-size=128
     ports:
       - "5601:5601"
