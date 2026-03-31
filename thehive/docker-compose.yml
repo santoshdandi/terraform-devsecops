@@ -1,6 +1,6 @@
 services:
   thehive:
-    image: thehiveproject/thehive:4.0.2
+    image: thehiveproject/thehive:5
     container_name: thehive
     environment:
       - JVM_OPTS=-Xms256m -Xmx256m
