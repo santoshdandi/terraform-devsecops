@@ -1,0 +1,25 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.lock.hcl
+
+# Python virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS / editor junk (optional but useful)
+.DS_Store
+.vscode/
+.idea/
